@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header className={HeaderCSS.header}>
-        <h1 className={HeaderCSS.h1}>CV CREATOR</h1>
+        <h1 className={HeaderCSS.title}>CV MAKER</h1>
       </header>
     );
   }

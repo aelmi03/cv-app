@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import Header from "./components/Header/Header";
+import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
+import "./styles/App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
   render() {
     return (
-      <div>
+      <div className="app">
         <Header />
-        <h1 className="h1">Hello</h1>
+        <div className="cv-forms-section">
+          <GeneralInfo />
+        </div>
       </div>
     );
   }
