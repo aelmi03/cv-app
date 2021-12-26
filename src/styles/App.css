@@ -18,3 +18,22 @@
   border-radius: 9px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.delete-button,
+.add-button {
+  background-color: #f50057;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 5px;
+  border: none;
+  min-width: 13rem;
+  width: 60%;
+  font-weight: bold;
+}
+
+.delete-button {
+  background-color: #f50057;
+}
+.add-button {
+  background-color: rgb(7, 196, 7);
+}

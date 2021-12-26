@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header/Header";
 import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
+import EducationalInfo from "./components/EducationalInfo/EducationalInfo.js";
 import "./styles/App.css";
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
             generalInfo={this.state.generalInfo}
             updateGeneralInfo={this.updateGeneralInfo}
           />
+          <EducationalInfo />
         </div>
       </div>
     );
