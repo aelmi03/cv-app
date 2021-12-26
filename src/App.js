@@ -16,13 +16,26 @@ class App extends Component {
         description: "",
       },
     };
+    this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
+  }
+  updateGeneralInfo(propertyName, propertyValue) {
+    const newGeneralInfoObject = JSON.parse(
+      JSON.stringify(this.state.generalInfo)
+    );
+    newGeneralInfoObject[propertyName] = propertyValue;
+    this.setState({
+      generalInfo: newGeneralInfoObject,
+    });
   }
   render() {
     return (
       <div className="app">
         <Header />
         <div className="cv-forms-section">
-          <GeneralInfo generalInfo={this.state.generalInfo} />
+          <GeneralInfo
+            generalInfo={this.state.generalInfo}
+            updateGeneralInfo={this.updateGeneralInfo}
+          />
         </div>
       </div>
     );
