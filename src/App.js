@@ -6,14 +6,23 @@ import "./styles/App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      generalInfo: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        address: "",
+        description: "",
+      },
+    };
   }
   render() {
     return (
       <div className="app">
         <Header />
         <div className="cv-forms-section">
-          <GeneralInfo />
+          <GeneralInfo generalInfo={this.state.generalInfo} />
         </div>
       </div>
     );
