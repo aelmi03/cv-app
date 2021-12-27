@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header/Header";
 import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
 import EducationalInfo from "./components/EducationalInfo/EducationalInfo.js";
+import uniqid from "uniqid";
 import "./styles/App.css";
 
 class App extends Component {
@@ -16,6 +17,29 @@ class App extends Component {
         address: "",
         description: "",
       },
+      educations: [
+        {
+          institution: "",
+          degree: "",
+          from: "",
+          to: "",
+          id: uniqid(),
+        },
+        {
+          institution: "",
+          degree: "",
+          from: "",
+          to: "",
+          id: uniqid(),
+        },
+        {
+          institution: "",
+          degree: "",
+          from: "",
+          to: "",
+          id: uniqid(),
+        },
+      ],
     };
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
   }
@@ -37,7 +61,7 @@ class App extends Component {
             generalInfo={this.state.generalInfo}
             updateGeneralInfo={this.updateGeneralInfo}
           />
-          <EducationalInfo />
+          <EducationalInfo educations={this.state.educations} />
         </div>
       </div>
     );

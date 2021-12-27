@@ -3,15 +3,23 @@ import EducationalInfoCSS from "./EducationalInfo.module.css";
 import EducationalForm from "../EducationalForm/EducationalForm";
 
 class EducationalInfo extends Component {
-  constructor(props) {
-    super(props);
+  loadEducationForms() {
+    return this.props.educations.map((educationObject) => {
+      return (
+        <EducationalForm
+          education={educationObject}
+          key={educationObject.id}
+          id={educationObject.id}
+        />
+      );
+    });
   }
   render() {
     return (
       <div className={EducationalInfoCSS.container}>
         <h1 className={EducationalInfoCSS.heading}>Education</h1>
-        <EducationalForm />
-        <button class="add-button">ADD</button>
+        {this.loadEducationForms()}
+        <button className="add-button">ADD</button>
       </div>
     );
   }
