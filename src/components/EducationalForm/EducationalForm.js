@@ -5,6 +5,7 @@ class EducationalForm extends Component {
   constructor(props) {
     super(props);
     this.educationalFormListener = this.educationalFormListener.bind(this);
+    this.deleteEducationListener = this.deleteEducationListener.bind(this);
   }
   educationalFormListener(e) {
     this.props.updateEducationalInfo(
@@ -12,6 +13,9 @@ class EducationalForm extends Component {
       e.target.getAttribute("property"),
       e.target.value
     );
+  }
+  deleteEducationListener() {
+    this.props.deleteEducation(this.props.id);
   }
   render() {
     const { institution, degree, from, to } = this.props.education;
@@ -51,7 +55,12 @@ class EducationalForm extends Component {
             onChange={this.educationalFormListener}
           />
         </form>
-        <button className="delete-button">DELETE</button>
+        <button
+          className="delete-button"
+          onClick={this.deleteEducationListener}
+        >
+          DELETE
+        </button>
       </div>
     );
   }

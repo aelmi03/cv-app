@@ -16,6 +16,7 @@ class EducationalInfo extends Component {
           key={educationObject.id}
           id={educationObject.id}
           updateEducationalInfo={this.props.updateEducationalInfo}
+          deleteEducation={this.props.deleteEducation}
         />
       );
     });

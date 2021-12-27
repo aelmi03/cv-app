@@ -31,6 +31,7 @@ class App extends Component {
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
     this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
     this.addEducation = this.addEducation.bind(this);
+    this.deleteEducation = this.deleteEducation.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -67,6 +68,14 @@ class App extends Component {
       educations: newEducations,
     });
   }
+  deleteEducation(id) {
+    const newEducations = this.state.educations.filter(
+      (education) => education.id !== id
+    );
+    this.setState({
+      educations: newEducations,
+    });
+  }
   render() {
     return (
       <div className="app">
@@ -80,6 +89,7 @@ class App extends Component {
             educations={this.state.educations}
             updateEducationalInfo={this.updateEducationalInfo}
             addEducation={this.addEducation}
+            deleteEducation={this.deleteEducation}
           />
         </div>
       </div>
