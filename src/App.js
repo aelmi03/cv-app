@@ -7,6 +7,7 @@ import "./styles/App.css";
 
 class App extends Component {
   constructor(props) {
+    console.log("hello");
     super(props);
     this.state = {
       generalInfo: {
@@ -25,23 +26,10 @@ class App extends Component {
           to: "",
           id: uniqid(),
         },
-        {
-          institution: "",
-          degree: "",
-          from: "",
-          to: "",
-          id: uniqid(),
-        },
-        {
-          institution: "",
-          degree: "",
-          from: "",
-          to: "",
-          id: uniqid(),
-        },
       ],
     };
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
+    this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -50,6 +38,18 @@ class App extends Component {
     newGeneralInfoObject[propertyName] = propertyValue;
     this.setState({
       generalInfo: newGeneralInfoObject,
+    });
+  }
+  updateEducationalInfo(id, property, value) {
+    const newEducations = this.state.educations.map((education) => {
+      if (education.id === id) {
+        education[property] = value;
+      }
+      return education;
+    });
+    console.log(newEducations);
+    this.setState({
+      educations: newEducations,
     });
   }
   render() {
@@ -61,7 +61,10 @@ class App extends Component {
             generalInfo={this.state.generalInfo}
             updateGeneralInfo={this.updateGeneralInfo}
           />
-          <EducationalInfo educations={this.state.educations} />
+          <EducationalInfo
+            educations={this.state.educations}
+            updateEducationalInfo={this.updateEducationalInfo}
+          />
         </div>
       </div>
     );
