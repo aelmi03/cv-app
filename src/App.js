@@ -30,6 +30,7 @@ class App extends Component {
     };
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
     this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
+    this.addEducation = this.addEducation.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -47,7 +48,21 @@ class App extends Component {
       }
       return education;
     });
-    console.log(newEducations);
+    this.setState({
+      educations: newEducations,
+    });
+  }
+  addEducation() {
+    const newEducations = [
+      ...this.state.educations,
+      {
+        institution: "",
+        degree: "",
+        from: "",
+        to: "",
+        id: uniqid(),
+      },
+    ];
     this.setState({
       educations: newEducations,
     });
@@ -64,6 +79,7 @@ class App extends Component {
           <EducationalInfo
             educations={this.state.educations}
             updateEducationalInfo={this.updateEducationalInfo}
+            addEducation={this.addEducation}
           />
         </div>
       </div>
