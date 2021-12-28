@@ -54,6 +54,7 @@ class App extends Component {
     this.deleteWorkExperience = this.deleteWorkExperience.bind(this);
     this.addWorkExperience = this.addWorkExperience.bind(this);
     this.updateSkill = this.updateSkill.bind(this);
+    this.addSkill = this.addSkill.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -98,7 +99,6 @@ class App extends Component {
     this.setState({
       skills: newSkills,
     });
-    console.log(this.state.skills);
   }
   addEducation() {
     const newEducations = [
@@ -129,6 +129,18 @@ class App extends Component {
     ];
     this.setState({
       workExperiences: newWorkExperiences,
+    });
+  }
+  addSkill() {
+    const newSkills = [
+      ...this.state.skills,
+      {
+        skill: "",
+        id: uniqid(),
+      },
+    ];
+    this.setState({
+      skills: newSkills,
     });
   }
   deleteEducation(id) {
@@ -171,6 +183,7 @@ class App extends Component {
           <SkillInfo
             skills={this.state.skills}
             updateSkill={this.updateSkill}
+            addSkill={this.addSkill}
           />
         </div>
       </div>

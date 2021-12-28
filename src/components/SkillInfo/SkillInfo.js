@@ -20,7 +20,9 @@ class SkillInfo extends Component {
       <div className={SkillInfoCSS.container}>
         <h1 className={SkillInfoCSS.heading}>Skills</h1>
         {this.loadSkills()}
-        <button className="add-button">ADD</button>
+        <button className="add-button" onClick={this.props.addSkill}>
+          ADD
+        </button>
       </div>
     );
   }
