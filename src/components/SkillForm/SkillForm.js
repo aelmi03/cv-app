@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import SkillFormCSS from "./SkillForm.module.css";
 
 class SkillForm extends Component {
+  constructor(props) {
+    super(props);
+    this.updateSkillListener = this.updateSkillListener.bind(this);
+  }
+  updateSkillListener(e) {
+    this.props.updateSkill(this.props.id, e.target.value);
+  }
   render() {
     return (
       <div className={SkillFormCSS.container}>
@@ -10,8 +17,8 @@ class SkillForm extends Component {
             type="text"
             className={SkillFormCSS.input}
             placeholder="Skill"
-            property="skill"
             value={this.props.skill}
+            onChange={this.updateSkillListener}
           />
         </form>
         <button className="delete-button">DELETE</button>

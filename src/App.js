@@ -88,16 +88,17 @@ class App extends Component {
       workExperiences: newWorkExperiences,
     });
   }
-  updateSkill(id, property, value) {
-    const newSkills = this.state.skills.map((skill) => {
-      if (skill.id === id) {
-        skill[property] = value;
+  updateSkill(id, value) {
+    const newSkills = this.state.skills.map((skillObject) => {
+      if (skillObject.id === id) {
+        skillObject.skill = value;
       }
-      return skill;
+      return skillObject;
     });
     this.setState({
       skills: newSkills,
     });
+    console.log(this.state.skills);
   }
   addEducation() {
     const newEducations = [
@@ -167,7 +168,10 @@ class App extends Component {
             addWorkExperience={this.addWorkExperience}
             deleteWorkExperience={this.deleteWorkExperience}
           />
-          <SkillInfo skills={this.state.skills} />
+          <SkillInfo
+            skills={this.state.skills}
+            updateSkill={this.updateSkill}
+          />
         </div>
       </div>
     );

@@ -10,6 +10,7 @@ class SkillInfo extends Component {
           skill={skillObject.skill}
           key={skillObject.id}
           id={skillObject.id}
+          updateSkill={this.props.updateSkill}
         />
       );
     });
