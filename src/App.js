@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
 import EducationalInfo from "./components/EducationalInfo/EducationalInfo.js";
 import WorkExpInfo from "./components/WorkExpInfo/WorkExpInfo";
+import SkillInfo from "./components/SkillInfo/SkillInfo";
 import uniqid from "uniqid";
 import "./styles/App.css";
 
@@ -148,6 +149,7 @@ class App extends Component {
             addWorkExperience={this.addWorkExperience}
             deleteWorkExperience={this.deleteWorkExperience}
           />
+          <SkillInfo />
         </div>
       </div>
     );
