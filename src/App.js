@@ -44,6 +44,7 @@ class App extends Component {
     this.addEducation = this.addEducation.bind(this);
     this.deleteEducation = this.deleteEducation.bind(this);
     this.updateWorkExperience = this.updateWorkExperience.bind(this);
+    this.deleteWorkExperience = this.deleteWorkExperience.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -143,6 +144,7 @@ class App extends Component {
           <WorkExpInfo
             workExperiences={this.state.workExperiences}
             updateWorkExperience={this.updateWorkExperience}
+            deleteWorkExperience={this.deleteWorkExperience}
           />
         </div>
       </div>

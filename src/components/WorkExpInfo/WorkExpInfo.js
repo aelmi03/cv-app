@@ -9,6 +9,7 @@ class WorkExpInfo extends Component {
         <WorkExpForm
           workExperience={workExperience}
           updateWorkExperience={this.props.updateWorkExperience}
+          deleteWorkExperience={this.props.deleteWorkExperience}
           key={workExperience.id}
           id={workExperience.id}
         />

@@ -5,6 +5,7 @@ class WorkExpForm extends Component {
   constructor(props) {
     super(props);
     this.updateWorkForm = this.updateWorkForm.bind(this);
+    this.deleteWorkForm = this.deleteWorkForm.bind(this);
   }
   updateWorkForm(e) {
     this.props.updateWorkExperience(
@@ -12,6 +13,9 @@ class WorkExpForm extends Component {
       e.target.getAttribute("property"),
       e.target.value
     );
+  }
+  deleteWorkForm() {
+    this.props.deleteWorkExperience(this.props.id);
   }
   render() {
     const { position, company, city, from, to } = this.props.workExperience;
@@ -59,7 +63,9 @@ class WorkExpForm extends Component {
             onChange={this.updateWorkForm}
           />
         </form>
-        <button className="delete-button">DELETE</button>
+        <button className="delete-button" onClick={this.deleteWorkForm}>
+          DELETE
+        </button>
       </div>
     );
   }
