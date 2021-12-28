@@ -5,9 +5,13 @@ class SkillForm extends Component {
   constructor(props) {
     super(props);
     this.updateSkillListener = this.updateSkillListener.bind(this);
+    this.deleteSkillListener = this.deleteSkillListener.bind(this);
   }
   updateSkillListener(e) {
     this.props.updateSkill(this.props.id, e.target.value);
+  }
+  deleteSkillListener() {
+    this.props.deleteSkill(this.props.id);
   }
   render() {
     return (
@@ -21,7 +25,9 @@ class SkillForm extends Component {
             onChange={this.updateSkillListener}
           />
         </form>
-        <button className="delete-button">DELETE</button>
+        <button className="delete-button" onClick={this.deleteSkillListener}>
+          DELETE
+        </button>
       </div>
     );
   }

@@ -11,6 +11,7 @@ class SkillInfo extends Component {
           key={skillObject.id}
           id={skillObject.id}
           updateSkill={this.props.updateSkill}
+          deleteSkill={this.props.deleteSkill}
         />
       );
     });

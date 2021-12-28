@@ -54,6 +54,7 @@ class App extends Component {
     this.deleteWorkExperience = this.deleteWorkExperience.bind(this);
     this.addWorkExperience = this.addWorkExperience.bind(this);
     this.updateSkill = this.updateSkill.bind(this);
+    this.deleteSkill = this.deleteSkill.bind(this);
     this.addSkill = this.addSkill.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
@@ -159,6 +160,12 @@ class App extends Component {
       workExperiences: newWorkExperiences,
     });
   }
+  deleteSkill(id) {
+    const newSkills = this.state.skills.filter((skill) => skill.id !== id);
+    this.setState({
+      skills: newSkills,
+    });
+  }
   render() {
     return (
       <div className="app">
@@ -184,6 +191,7 @@ class App extends Component {
             skills={this.state.skills}
             updateSkill={this.updateSkill}
             addSkill={this.addSkill}
+            deleteSkill={this.deleteSkill}
           />
         </div>
       </div>
