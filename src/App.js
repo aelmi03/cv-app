@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./components/Header/Header";
 import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
 import EducationalInfo from "./components/EducationalInfo/EducationalInfo.js";
+import WorkExpInfo from "./components/WorkExpInfo/WorkExpInfo";
 import uniqid from "uniqid";
 import "./styles/App.css";
 
@@ -91,6 +92,7 @@ class App extends Component {
             addEducation={this.addEducation}
             deleteEducation={this.deleteEducation}
           />
+          <WorkExpInfo />
         </div>
       </div>
     );
