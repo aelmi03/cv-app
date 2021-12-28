@@ -43,6 +43,7 @@ class App extends Component {
     this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
     this.addEducation = this.addEducation.bind(this);
     this.deleteEducation = this.deleteEducation.bind(this);
+    this.updateWorkExperience = this.updateWorkExperience.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -64,6 +65,19 @@ class App extends Component {
       educations: newEducations,
     });
   }
+  updateWorkExperience(id, property, value) {
+    const newWorkExperiences = this.state.workExperiences.map(
+      (workExperience) => {
+        if (workExperience.id === id) {
+          workExperience[property] = value;
+        }
+        return workExperience;
+      }
+    );
+    this.setState({
+      workExperiences: newWorkExperiences,
+    });
+  }
   addEducation() {
     const newEducations = [
       ...this.state.educations,
@@ -79,12 +93,36 @@ class App extends Component {
       educations: newEducations,
     });
   }
+  addWorkExperience() {
+    const newWorkExperiences = [
+      ...this.state.workExperiences,
+      {
+        position: "",
+        company: "",
+        city: "",
+        from: "",
+        to: "",
+        id: uniqid(),
+      },
+    ];
+    this.setState({
+      workExperiences: newWorkExperiences,
+    });
+  }
   deleteEducation(id) {
     const newEducations = this.state.educations.filter(
       (education) => education.id !== id
     );
     this.setState({
       educations: newEducations,
+    });
+  }
+  deleteWorkExperience(id) {
+    const newWorkExperiences = this.state.workExperiences.filter(
+      (workExperience) => workExperience.id !== id
+    );
+    this.setState({
+      workExperiences: newWorkExperiences,
     });
   }
   render() {
@@ -102,7 +140,10 @@ class App extends Component {
             addEducation={this.addEducation}
             deleteEducation={this.deleteEducation}
           />
-          <WorkExpInfo workExperiences={this.state.workExperiences} />
+          <WorkExpInfo
+            workExperiences={this.state.workExperiences}
+            updateWorkExperience={this.updateWorkExperience}
+          />
         </div>
       </div>
     );

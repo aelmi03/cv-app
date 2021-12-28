@@ -5,7 +5,14 @@ import WorkExpForm from "../WorkExpForm/WorkExpForm";
 class WorkExpInfo extends Component {
   loadWorkForms() {
     return this.props.workExperiences.map((workExperience) => {
-      return <WorkExpForm workExperience={workExperience} />;
+      return (
+        <WorkExpForm
+          workExperience={workExperience}
+          updateWorkExperience={this.props.updateWorkExperience}
+          key={workExperience.id}
+          id={workExperience.id}
+        />
+      );
     });
   }
   render() {

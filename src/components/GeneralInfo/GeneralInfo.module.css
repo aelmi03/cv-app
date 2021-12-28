@@ -25,13 +25,13 @@
   padding: 0.3rem;
   width: 70%;
   border: 1px solid rgb(95, 95, 95);
-  min-width: 18rem;
+  min-width: 16rem;
 }
 
 .textarea {
   padding: 0.3rem;
   border: 1px solid rgb(87, 86, 86);
   border-radius: 5px;
-  min-width: 18rem;
+  min-width: 16rem;
   width: 70%;
 }
