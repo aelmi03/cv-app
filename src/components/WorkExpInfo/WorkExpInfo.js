@@ -3,11 +3,16 @@ import WorkExpInfoCSS from "./WorkExpInfo.module.css";
 import WorkExpForm from "../WorkExpForm/WorkExpForm";
 
 class WorkExpInfo extends Component {
+  loadWorkForms() {
+    return this.props.workExperiences.map((workExperience) => {
+      return <WorkExpForm workExperience={workExperience} />;
+    });
+  }
   render() {
     return (
       <div className={WorkExpInfoCSS.container}>
         <h1 className={WorkExpInfoCSS.heading}>Work Experience</h1>
-        <WorkExpForm />
+        {this.loadWorkForms()}
         <button className="add-button">ADD</button>
       </div>
     );

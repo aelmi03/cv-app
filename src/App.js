@@ -28,6 +28,16 @@ class App extends Component {
           id: uniqid(),
         },
       ],
+      workExperiences: [
+        {
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+          id: uniqid(),
+        },
+      ],
     };
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
     this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
@@ -92,7 +102,7 @@ class App extends Component {
             addEducation={this.addEducation}
             deleteEducation={this.deleteEducation}
           />
-          <WorkExpInfo />
+          <WorkExpInfo workExperiences={this.state.workExperiences} />
         </div>
       </div>
     );
