@@ -39,6 +39,12 @@ class App extends Component {
           id: uniqid(),
         },
       ],
+      skills: [
+        {
+          skill: "",
+          id: uniqid(),
+        },
+      ],
     };
     this.updateGeneralInfo = this.updateGeneralInfo.bind(this);
     this.updateEducationalInfo = this.updateEducationalInfo.bind(this);
@@ -47,6 +53,7 @@ class App extends Component {
     this.updateWorkExperience = this.updateWorkExperience.bind(this);
     this.deleteWorkExperience = this.deleteWorkExperience.bind(this);
     this.addWorkExperience = this.addWorkExperience.bind(this);
+    this.updateSkill = this.updateSkill.bind(this);
   }
   updateGeneralInfo(propertyName, propertyValue) {
     const newGeneralInfoObject = JSON.parse(
@@ -79,6 +86,17 @@ class App extends Component {
     );
     this.setState({
       workExperiences: newWorkExperiences,
+    });
+  }
+  updateSkill(id, property, value) {
+    const newSkills = this.state.skills.map((skill) => {
+      if (skill.id === id) {
+        skill[property] = value;
+      }
+      return skill;
+    });
+    this.setState({
+      skills: newSkills,
     });
   }
   addEducation() {
@@ -149,7 +167,7 @@ class App extends Component {
             addWorkExperience={this.addWorkExperience}
             deleteWorkExperience={this.deleteWorkExperience}
           />
-          <SkillInfo />
+          <SkillInfo skills={this.state.skills} />
         </div>
       </div>
     );
