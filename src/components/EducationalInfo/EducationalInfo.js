@@ -3,10 +3,6 @@ import EducationalInfoCSS from "./EducationalInfo.module.css";
 import EducationalForm from "../EducationalForm/EducationalForm";
 
 class EducationalInfo extends Component {
-  constructor(props) {
-    super(props);
-    this.addEducationHandler = this.addEducationHandler.bind(this);
-  }
   loadEducationForms() {
     return this.props.educations.map((educationObject) => {
       return (
@@ -20,15 +16,12 @@ class EducationalInfo extends Component {
       );
     });
   }
-  addEducationHandler() {
-    this.props.addEducation();
-  }
   render() {
     return (
       <div className={EducationalInfoCSS.container}>
         <h1 className={EducationalInfoCSS.heading}>Education</h1>
         {this.loadEducationForms()}
-        <button className="add-button" onClick={this.addEducationHandler}>
+        <button className="add-button" onClick={this.props.addEducation}>
           ADD
         </button>
       </div>

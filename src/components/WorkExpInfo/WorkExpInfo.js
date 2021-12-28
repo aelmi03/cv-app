@@ -21,7 +21,9 @@ class WorkExpInfo extends Component {
       <div className={WorkExpInfoCSS.container}>
         <h1 className={WorkExpInfoCSS.heading}>Work Experience</h1>
         {this.loadWorkForms()}
-        <button className="add-button">ADD</button>
+        <button className="add-button" onClick={this.props.addWorkExperience}>
+          ADD
+        </button>
       </div>
     );
   }
