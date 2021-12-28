@@ -9,7 +9,6 @@ class EducationalInfo extends Component {
   }
   loadEducationForms() {
     return this.props.educations.map((educationObject) => {
-      console.log(this.props.updateEducationalInfo);
       return (
         <EducationalForm
           education={educationObject}
