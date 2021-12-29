@@ -4,12 +4,15 @@ import LivePreviewCSS from "./LivePreview.module.css";
 
 class LivePreview extends Component {
   render() {
-    const { firstName, lastName } = this.props.generalInfo;
+    const { generalInfo } = this.props;
+    const { firstName, lastName } = generalInfo;
     return (
       <div className={LivePreviewCSS.container}>
         <h1 className={LivePreviewCSS.title}>{`${firstName} ${lastName}`}</h1>
         <div className={LivePreviewCSS.information}>
-          <GeneralPreview />
+          <div className={LivePreviewCSS.minorInfo}>
+            <GeneralPreview generalInfo={generalInfo} />
+          </div>
         </div>
       </div>
     );
