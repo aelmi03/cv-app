@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GeneralPreview from "../GeneralPreview/GeneralPreview";
 import LivePreviewCSS from "./LivePreview.module.css";
 
 class LivePreview extends Component {
@@ -7,6 +8,9 @@ class LivePreview extends Component {
     return (
       <div className={LivePreviewCSS.container}>
         <h1 className={LivePreviewCSS.title}>{`${firstName} ${lastName}`}</h1>
+        <div className={LivePreviewCSS.information}>
+          <GeneralPreview />
+        </div>
       </div>
     );
   }

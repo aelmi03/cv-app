@@ -3,7 +3,7 @@
   background-color: white;
   padding: 0.8rem;
   display: flex;
-  flex-direction: column nowrap;
+  flex-flow: column nowrap;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -13,4 +13,10 @@
 .title {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+.information {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
 }

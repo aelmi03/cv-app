@@ -4,7 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: rgb(119, 54, 215);
+  background: linear-gradient(
+    90deg,
+    rgba(119, 54, 215, 1) 11%,
+    rgba(118, 198, 226, 1) 79%
+  );
 }
 
 .title {
