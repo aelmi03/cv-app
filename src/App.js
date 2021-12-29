@@ -4,6 +4,7 @@ import GeneralInfo from "./components/GeneralInfo/GeneralInfo";
 import EducationalInfo from "./components/EducationalInfo/EducationalInfo.js";
 import WorkExpInfo from "./components/WorkExpInfo/WorkExpInfo";
 import SkillInfo from "./components/SkillInfo/SkillInfo";
+import LivePreview from "./components/LivePreview/LivePreview";
 import uniqid from "uniqid";
 import "./styles/App.css";
 
@@ -170,29 +171,32 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <div className="cv-forms-section">
-          <GeneralInfo
-            generalInfo={this.state.generalInfo}
-            updateGeneralInfo={this.updateGeneralInfo}
-          />
-          <EducationalInfo
-            educations={this.state.educations}
-            updateEducationalInfo={this.updateEducationalInfo}
-            addEducation={this.addEducation}
-            deleteEducation={this.deleteEducation}
-          />
-          <WorkExpInfo
-            workExperiences={this.state.workExperiences}
-            updateWorkExperience={this.updateWorkExperience}
-            addWorkExperience={this.addWorkExperience}
-            deleteWorkExperience={this.deleteWorkExperience}
-          />
-          <SkillInfo
-            skills={this.state.skills}
-            updateSkill={this.updateSkill}
-            addSkill={this.addSkill}
-            deleteSkill={this.deleteSkill}
-          />
+        <div className="main-section">
+          <div className="cv-forms-section">
+            <GeneralInfo
+              generalInfo={this.state.generalInfo}
+              updateGeneralInfo={this.updateGeneralInfo}
+            />
+            <EducationalInfo
+              educations={this.state.educations}
+              updateEducationalInfo={this.updateEducationalInfo}
+              addEducation={this.addEducation}
+              deleteEducation={this.deleteEducation}
+            />
+            <WorkExpInfo
+              workExperiences={this.state.workExperiences}
+              updateWorkExperience={this.updateWorkExperience}
+              addWorkExperience={this.addWorkExperience}
+              deleteWorkExperience={this.deleteWorkExperience}
+            />
+            <SkillInfo
+              skills={this.state.skills}
+              updateSkill={this.updateSkill}
+              addSkill={this.addSkill}
+              deleteSkill={this.deleteSkill}
+            />
+          </div>
+          <LivePreview generalInfo={this.state.generalInfo} />
         </div>
       </div>
     );
