@@ -25,5 +25,5 @@
 .minorInfo {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.9rem;
+  gap: 2rem;
 }

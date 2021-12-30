@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GeneralPreview from "../GeneralPreview/GeneralPreview";
+import SkillsPreview from "../SkillsPreview/SkillsPreview";
 import LivePreviewCSS from "./LivePreview.module.css";
 
 class LivePreview extends Component {
@@ -12,6 +13,7 @@ class LivePreview extends Component {
         <div className={LivePreviewCSS.information}>
           <div className={LivePreviewCSS.minorInfo}>
             <GeneralPreview generalInfo={generalInfo} />
+            <SkillsPreview skills={this.props.skills} />
           </div>
         </div>
       </div>

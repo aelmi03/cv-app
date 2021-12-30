@@ -196,7 +196,10 @@ class App extends Component {
               deleteSkill={this.deleteSkill}
             />
           </div>
-          <LivePreview generalInfo={this.state.generalInfo} />
+          <LivePreview
+            generalInfo={this.state.generalInfo}
+            skills={this.state.skills}
+          />
         </div>
       </div>
     );
