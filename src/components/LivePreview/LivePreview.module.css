@@ -19,10 +19,17 @@
 .information {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
   gap: 1.5rem;
 }
 
 .minorInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+}
+
+.mainInfo {
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;

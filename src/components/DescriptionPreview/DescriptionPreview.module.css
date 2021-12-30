@@ -3,12 +3,8 @@
   flex-flow: column nowrap;
   gap: 1rem;
 }
-.general {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5rem;
-}
-.info {
+
+.p {
   font-size: 1rem;
   word-wrap: wrap;
   word-break: break-all;
