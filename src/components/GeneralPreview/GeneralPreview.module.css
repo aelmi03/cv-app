@@ -3,11 +3,13 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  text-align: start;
   gap: 1rem;
 }
 .general {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 .info {

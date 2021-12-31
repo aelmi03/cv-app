@@ -4,14 +4,17 @@ import WorkExperienceRow from "../WorkExperienceRow/WorkExperienceRow";
 import WorkExperiencePreviewCSS from "./WorkExperiencePreview.module.css";
 
 class WorkExperiencePreview extends Component {
+  loadWorkExperienceRows() {
+    return this.props.workExperiences.map((workExperience) => {
+      return <WorkExperienceRow workExperience={workExperience} />;
+    });
+  }
   render() {
     return (
       <div className={WorkExperiencePreviewCSS.container}>
         <PreviewHeading title="Work Experience" />
         <div className={WorkExperiencePreviewCSS.workExperienceList}>
-          <WorkExperienceRow workExperience={this.props.workExperiences[0]} />
-          <WorkExperienceRow workExperience={this.props.workExperiences[1]} />
-          <WorkExperienceRow workExperience={this.props.workExperiences[2]} />
+          {this.loadWorkExperienceRows()}
         </div>
       </div>
     );
