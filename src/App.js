@@ -199,6 +199,7 @@ class App extends Component {
           <LivePreview
             generalInfo={this.state.generalInfo}
             skills={this.state.skills}
+            educations={this.state.educations}
           />
         </div>
       </div>

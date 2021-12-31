@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+}
+.years,
+.school {
+  font-weight: bold;
+}
+
+.degree {
+  font-style: italic;
+}

@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.educationList {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}

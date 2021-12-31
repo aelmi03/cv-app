@@ -11,7 +11,6 @@
   flex-flow: column nowrap;
   gap: 0.6rem;
   justify-content: center;
-  overflow: hidden;
 }
 
 .li {
@@ -19,5 +18,4 @@
   list-style: disc;
   word-wrap: wrap;
   word-break: break-all;
-  list-style-position: inside;
 }
