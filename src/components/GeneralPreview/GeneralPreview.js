@@ -10,10 +10,17 @@ class GeneralPreview extends Component {
         <PreviewHeading title="Personal Details" />
         <div className={GeneralPreviewCSS.general}>
           <p className={GeneralPreviewCSS.info}>
-            {`Phone-Number : ${phoneNumber}`}{" "}
+            <span className={GeneralPreviewCSS.span}>Phone-Number: </span>
+            {`${phoneNumber}`}{" "}
           </p>
-          <p className={GeneralPreviewCSS.info}>{`Email : ${email}`} </p>
-          <p className={GeneralPreviewCSS.info}>{`Address : ${address}`} </p>
+          <p className={GeneralPreviewCSS.info}>
+            <span className={GeneralPreviewCSS.span}>Email: </span>
+            {`${email}`}
+          </p>
+          <p className={GeneralPreviewCSS.info}>
+            <span className={GeneralPreviewCSS.span}>Address: </span>
+            {`${address}`}
+          </p>{" "}
         </div>
       </div>
     );

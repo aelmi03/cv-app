@@ -7,7 +7,7 @@ class DescriptionPreview extends Component {
     return (
       <div className={DescriptionPreviewCSS.container}>
         <PreviewHeading title="Description" />
-        <p>{this.props.description}</p>
+        <p className={DescriptionPreviewCSS.p}>{this.props.description}</p>
       </div>
     );
   }

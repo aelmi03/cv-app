@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .general {
@@ -12,4 +14,8 @@
   font-size: 1rem;
   word-wrap: wrap;
   word-break: break-all;
+}
+
+.span {
+  font-weight: bold;
 }
