@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.3rem;
+}
+
+.minorInfo,
+.mainInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+}
+
+.years,
+.company {
+  font-weight: bold;
+}
+
+.position {
+  font-style: oblique;
+}
+
+.city {
+  font-style: italic;
+}

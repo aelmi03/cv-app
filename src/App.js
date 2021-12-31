@@ -200,6 +200,7 @@ class App extends Component {
             generalInfo={this.state.generalInfo}
             skills={this.state.skills}
             educations={this.state.educations}
+            workExperiences={this.state.workExperiences}
           />
         </div>
       </div>
