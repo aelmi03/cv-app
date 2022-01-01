@@ -23,3 +23,9 @@
   min-width: 16rem;
   border: 1px solid rgb(95, 95, 95);
 }
+
+@media only screen and (min-width: 1366px) {
+  .input {
+    width: 90%;
+  }
+}

@@ -23,3 +23,18 @@
 .city {
   font-style: italic;
 }
+
+@media only screen and (min-width: 768px) {
+  .city,
+  .position,
+  .years,
+  .company {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    gap: 2.5rem;
+  }
+}

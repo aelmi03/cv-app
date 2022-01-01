@@ -12,3 +12,9 @@
   word-break: break-all;
   width: 80%;
 }
+
+@media only screen and (min-width: 768px) {
+  .p {
+    font-size: 1.2rem;
+  }
+}

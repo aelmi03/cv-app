@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 63rem;
 }
 
 .title {
@@ -33,4 +34,53 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
+}
+
+@media only screen and (min-width: 540px) {
+  .title {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .information {
+    flex-flow: row nowrap;
+  }
+  .mainInfo {
+    flex-grow: 1;
+  }
+  .title {
+    font-size: 3.2rem;
+  }
+  .minorInfo {
+    flex-grow: 0;
+    gap: 4rem;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    min-width: 15rem;
+  }
+
+  .container {
+    padding: 0.8rem 0.4rem 0rem 0.4rem;
+    gap: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .minorInfo {
+    min-width: 20rem;
+  }
 }

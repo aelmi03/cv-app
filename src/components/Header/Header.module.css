@@ -19,3 +19,9 @@
   color: white;
   font-family: "Playfair Display", serif;
 }
+
+@media only screen and (min-width: 540px) {
+  .title {
+    font-size: 3.2rem;
+  }
+}

@@ -48,3 +48,19 @@
 .add-button {
   background-color: rgb(7, 196, 7);
 }
+
+@media only screen and (min-width: 1330px) {
+  .main-section {
+    flex-flow: row nowrap;
+    gap: 1rem;
+    padding: 0rem 0.8rem;
+    align-items: flex-start;
+  }
+  .cv-forms-section {
+    width: 50%;
+  }
+  .add-button,
+  .delete-button {
+    width: 90%;
+  }
+}

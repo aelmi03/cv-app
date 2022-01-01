@@ -24,3 +24,16 @@
   margin-right: 0.2rem;
   font-family: "Josefin Sans", sans-serif;
 }
+
+@media only screen and (min-width: 768px) {
+  .info,
+  .span {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .container {
+    text-align: center;
+  }
+}
