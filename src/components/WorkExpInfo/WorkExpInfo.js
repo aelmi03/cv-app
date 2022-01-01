@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import WorkExpInfoCSS from "./WorkExpInfo.module.css";
+import FormHeader from "../FormHeader/FormHeader";
 import WorkExpForm from "../WorkExpForm/WorkExpForm";
 
 class WorkExpInfo extends Component {
@@ -19,7 +20,7 @@ class WorkExpInfo extends Component {
   render() {
     return (
       <div className={WorkExpInfoCSS.container}>
-        <h1 className={WorkExpInfoCSS.heading}>Work Experience</h1>
+        <FormHeader title="Work Experience" />
         {this.loadWorkForms()}
         <button className="add-button" onClick={this.props.addWorkExperience}>
           ADD

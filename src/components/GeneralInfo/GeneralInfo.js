@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FormHeader from "../FormHeader/FormHeader";
 import GeneralInfoCSS from "./GeneralInfo.module.css";
 
 class GeneralInfo extends Component {
@@ -17,7 +18,7 @@ class GeneralInfo extends Component {
       this.props.generalInfo;
     return (
       <div className={GeneralInfoCSS.container}>
-        <h1 className={GeneralInfoCSS.heading}>General Information</h1>
+        <FormHeader title="General" />
         <form className={GeneralInfoCSS.form}>
           <input
             type="text"

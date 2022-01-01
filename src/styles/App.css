@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 .app {
   width: 100%;
   display: flex;
@@ -37,6 +38,7 @@
   border: none;
   min-width: 16rem;
   width: 70%;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
 }
 

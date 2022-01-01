@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EducationalInfoCSS from "./EducationalInfo.module.css";
+import FormHeader from "../FormHeader/FormHeader";
 import EducationalForm from "../EducationalForm/EducationalForm";
 
 class EducationalInfo extends Component {
@@ -19,7 +20,7 @@ class EducationalInfo extends Component {
   render() {
     return (
       <div className={EducationalInfoCSS.container}>
-        <h1 className={EducationalInfoCSS.heading}>Education</h1>
+        <FormHeader title="Education" />
         {this.loadEducationForms()}
         <button className="add-button" onClick={this.props.addEducation}>
           ADD

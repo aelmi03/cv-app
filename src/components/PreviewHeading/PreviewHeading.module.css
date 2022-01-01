@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
 .container {
   display: flex;
   flex-flow: column nowrap;
@@ -8,6 +9,7 @@
 .title {
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Roboto Slab", serif;
 }
 .hr {
   border: 0;

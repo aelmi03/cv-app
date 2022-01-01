@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
 .header {
   padding: 2rem;
   width: 100%;
@@ -7,13 +8,14 @@
   background: rgb(119, 54, 215);
   background: linear-gradient(
     90deg,
-    rgba(119, 54, 215, 1) 11%,
-    rgba(118, 198, 226, 1) 79%
+    rgb(193, 177, 218) 11%,
+    rgb(148, 205, 224) 79%
   );
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: white;
+  font-family: "Playfair Display", serif;
 }
