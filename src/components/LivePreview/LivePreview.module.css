@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 1rem;
   max-width: 63rem;
 }
 
@@ -64,7 +65,7 @@
     background-color: black;
     color: white;
     padding: 1rem;
-    min-width: 15rem;
+    min-width: 20rem;
   }
 
   .container {
@@ -73,13 +74,17 @@
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1440px) {
   .container {
     width: 50%;
+    margin-bottom: 0rem;
+  }
+  .minorInfo {
+    min-width: 15rem;
   }
 }
 
-@media only screen and (min-width: 1700px) {
+@media only screen and (min-width: 1800px) {
   .minorInfo {
     min-width: 20rem;
   }

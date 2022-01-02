@@ -23,7 +23,7 @@
   border: 1px solid rgb(95, 95, 95);
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1440px) {
   .input {
     width: 90%;
   }
