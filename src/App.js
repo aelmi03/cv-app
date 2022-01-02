@@ -10,7 +10,6 @@ import "./styles/App.css";
 
 class App extends Component {
   constructor(props) {
-    console.log("hello");
     super(props);
     this.state = {
       generalInfo: {
