@@ -6,7 +6,12 @@ import WorkExperiencePreviewCSS from "./WorkExperiencePreview.module.css";
 class WorkExperiencePreview extends Component {
   loadWorkExperienceRows() {
     return this.props.workExperiences.map((workExperience) => {
-      return <WorkExperienceRow workExperience={workExperience} />;
+      return (
+        <WorkExperienceRow
+          workExperience={workExperience}
+          key={workExperience.id}
+        />
+      );
     });
   }
   render() {
