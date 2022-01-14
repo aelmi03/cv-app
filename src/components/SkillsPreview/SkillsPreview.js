@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PreviewHeading from "../PreviewHeading/PreviewHeading";
 import SkillsPreviewCSS from "./SkillsPreview.module.css";
 
