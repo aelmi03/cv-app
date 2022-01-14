@@ -6,27 +6,25 @@ import LivePreviewCSS from "./LivePreview.module.css";
 import WorkExperiencePreview from "../WorkExperiencePreview/WorkExperiencePreview";
 import EducationPreview from "../EducationPreview/EducationPreview";
 
-class LivePreview extends Component {
-  render() {
-    const { generalInfo, skills, educations, workExperiences } = this.props;
-    const { firstName, lastName, description } = generalInfo;
-    return (
-      <div className={LivePreviewCSS.container}>
-        <h1 className={LivePreviewCSS.title}>{`${firstName} ${lastName}`}</h1>
-        <div className={LivePreviewCSS.information}>
-          <div className={LivePreviewCSS.mainInfo}>
-            <DescriptionPreview description={description} />
-            <EducationPreview educations={educations} />
-            <WorkExperiencePreview workExperiences={workExperiences} />
-          </div>
-          <div className={LivePreviewCSS.minorInfo}>
-            <GeneralPreview generalInfo={generalInfo} />
-            <SkillsPreview skills={skills} />
-          </div>
+const LivePreview = (props) => {
+  const { generalInfo, skills, educations, workExperiences } = props;
+  const { firstName, lastName, description } = generalInfo;
+  return (
+    <div className={LivePreviewCSS.container}>
+      <h1 className={LivePreviewCSS.title}>{`${firstName} ${lastName}`}</h1>
+      <div className={LivePreviewCSS.information}>
+        <div className={LivePreviewCSS.mainInfo}>
+          <DescriptionPreview description={description} />
+          <EducationPreview educations={educations} />
+          <WorkExperiencePreview workExperiences={workExperiences} />
+        </div>
+        <div className={LivePreviewCSS.minorInfo}>
+          <GeneralPreview generalInfo={generalInfo} />
+          <SkillsPreview skills={skills} />
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default LivePreview;

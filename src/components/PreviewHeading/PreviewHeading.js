@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import PreviewHeadingCSS from "./PreviewHeading.module.css";
 
-class PreviewHeading extends Component {
-  render() {
-    return (
-      <div className={PreviewHeadingCSS.container}>
-        <h2 className={PreviewHeadingCSS.title}>{this.props.title}</h2>
-        <hr className={PreviewHeadingCSS.hr}></hr>
-      </div>
-    );
-  }
-}
+const PreviewHeading = (props) => {
+  return (
+    <div className={PreviewHeadingCSS.container}>
+      <h2 className={PreviewHeadingCSS.title}>{props.title}</h2>
+      <hr className={PreviewHeadingCSS.hr}></hr>
+    </div>
+  );
+};
 
 export default PreviewHeading;

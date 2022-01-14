@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import FormHeaderCSS from "./FormHeader.module.css";
 
-class FormHeader extends Component {
-  render() {
-    return <h1 className={FormHeaderCSS.heading}>{this.props.title}</h1>;
-  }
-}
+const FormHeader = (props) => {
+  return <h1 className={FormHeaderCSS.heading}>{props.title}</h1>;
+};
 
 export default FormHeader;
