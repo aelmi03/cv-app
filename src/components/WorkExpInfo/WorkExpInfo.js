@@ -1,33 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import WorkExpInfoCSS from "./WorkExpInfo.module.css";
 import FormHeader from "../FormHeader/FormHeader";
 import WorkExpForm from "../WorkExpForm/WorkExpForm";
 
-class WorkExpInfo extends Component {
-  loadWorkForms() {
-    return this.props.workExperiences.map((workExperience) => {
+const WorkExpInfo = (props) => {
+  const loadWorkForms = () => {
+    return props.workExperiences.map((workExperience) => {
       return (
         <WorkExpForm
           workExperience={workExperience}
-          updateWorkExperience={this.props.updateWorkExperience}
-          deleteWorkExperience={this.props.deleteWorkExperience}
+          updateWorkExperience={props.updateWorkExperience}
+          deleteWorkExperience={props.deleteWorkExperience}
           key={workExperience.id}
           id={workExperience.id}
         />
       );
     });
-  }
-  render() {
-    return (
-      <div className={WorkExpInfoCSS.container}>
-        <FormHeader title="Work Experience" />
-        {this.loadWorkForms()}
-        <button className="add-button" onClick={this.props.addWorkExperience}>
-          ADD
-        </button>
-      </div>
-    );
-  }
-}
+  };
+  return (
+    <div className={WorkExpInfoCSS.container}>
+      <FormHeader title="Work Experience" />
+      {loadWorkForms()}
+      <button className="add-button" onClick={props.addWorkExperience}>
+        ADD
+      </button>
+    </div>
+  );
+};
 
 export default WorkExpInfo;

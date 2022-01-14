@@ -1,74 +1,67 @@
-import React, { Component } from "react";
+import React from "react";
 import WorkExpFormCSS from "./WorkExpForm.module.css";
 
-class WorkExpForm extends Component {
-  constructor(props) {
-    super(props);
-    this.updateWorkForm = this.updateWorkForm.bind(this);
-    this.deleteWorkForm = this.deleteWorkForm.bind(this);
-  }
-  updateWorkForm(e) {
-    this.props.updateWorkExperience(
-      this.props.id,
+const WorkExpForm = (props) => {
+  const updateWorkForm = (e) => {
+    props.updateWorkExperience(
+      props.id,
       e.target.getAttribute("property"),
       e.target.value
     );
-  }
-  deleteWorkForm() {
-    this.props.deleteWorkExperience(this.props.id);
-  }
-  render() {
-    const { position, company, city, from, to } = this.props.workExperience;
-    return (
-      <div className={WorkExpFormCSS.container}>
-        <form className={WorkExpFormCSS.form}>
-          <input
-            type="text"
-            className={WorkExpFormCSS.input}
-            placeholder="Position"
-            value={position}
-            property="position"
-            onChange={this.updateWorkForm}
-          />
-          <input
-            type="text"
-            className={WorkExpFormCSS.input}
-            placeholder="Company"
-            value={company}
-            property="company"
-            onChange={this.updateWorkForm}
-          />
-          <input
-            type="text"
-            className={WorkExpFormCSS.input}
-            placeholder="City"
-            value={city}
-            property="city"
-            onChange={this.updateWorkForm}
-          />
-          <input
-            type="text"
-            placeholder="From"
-            className={WorkExpFormCSS.input}
-            value={from}
-            property="from"
-            onChange={this.updateWorkForm}
-          />
-          <input
-            type="text"
-            placeholder="To"
-            className={WorkExpFormCSS.input}
-            value={to}
-            property="to"
-            onChange={this.updateWorkForm}
-          />
-        </form>
-        <button className="delete-button" onClick={this.deleteWorkForm}>
-          DELETE
-        </button>
-      </div>
-    );
-  }
-}
+  };
+  const deleteWorkForm = () => {
+    props.deleteWorkExperience(props.id);
+  };
+  const { position, company, city, from, to } = props.workExperience;
+  return (
+    <div className={WorkExpFormCSS.container}>
+      <form className={WorkExpFormCSS.form}>
+        <input
+          type="text"
+          className={WorkExpFormCSS.input}
+          placeholder="Position"
+          value={position}
+          property="position"
+          onChange={updateWorkForm}
+        />
+        <input
+          type="text"
+          className={WorkExpFormCSS.input}
+          placeholder="Company"
+          value={company}
+          property="company"
+          onChange={updateWorkForm}
+        />
+        <input
+          type="text"
+          className={WorkExpFormCSS.input}
+          placeholder="City"
+          value={city}
+          property="city"
+          onChange={updateWorkForm}
+        />
+        <input
+          type="text"
+          placeholder="From"
+          className={WorkExpFormCSS.input}
+          value={from}
+          property="from"
+          onChange={updateWorkForm}
+        />
+        <input
+          type="text"
+          placeholder="To"
+          className={WorkExpFormCSS.input}
+          value={to}
+          property="to"
+          onChange={updateWorkForm}
+        />
+      </form>
+      <button className="delete-button" onClick={deleteWorkForm}>
+        DELETE
+      </button>
+    </div>
+  );
+};
 
 export default WorkExpForm;
