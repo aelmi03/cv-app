@@ -1,33 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import EducationalInfoCSS from "./EducationalInfo.module.css";
 import FormHeader from "../FormHeader/FormHeader";
 import EducationalForm from "../EducationalForm/EducationalForm";
 
-class EducationalInfo extends Component {
-  loadEducationForms() {
-    return this.props.educations.map((educationObject) => {
+const EducationalInfo = (props) => {
+  console.log("educational");
+  const loadEducationForms = () => {
+    return props.educations.map((educationObject) => {
       return (
         <EducationalForm
           education={educationObject}
           key={educationObject.id}
           id={educationObject.id}
-          updateEducationalInfo={this.props.updateEducationalInfo}
-          deleteEducation={this.props.deleteEducation}
+          updateEducationalInfo={props.updateEducationalInfo}
+          deleteEducation={props.deleteEducation}
         />
       );
     });
-  }
-  render() {
-    return (
-      <div className={EducationalInfoCSS.container}>
-        <FormHeader title="Education" />
-        {this.loadEducationForms()}
-        <button className="add-button" onClick={this.props.addEducation}>
-          ADD
-        </button>
-      </div>
-    );
-  }
-}
+  };
+  return (
+    <div className={EducationalInfoCSS.container}>
+      <FormHeader title="Education" />
+      {loadEducationForms()}
+      <button className="add-button" onClick={props.addEducation}>
+        ADD
+      </button>
+    </div>
+  );
+};
 
 export default EducationalInfo;

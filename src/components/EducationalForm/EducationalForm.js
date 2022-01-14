@@ -1,69 +1,59 @@
-import React, { Component } from "react";
+import React from "react";
 import EducationalFormCSS from "./EducationalForm.module.css";
 
-class EducationalForm extends Component {
-  constructor(props) {
-    super(props);
-    this.educationalFormListener = this.educationalFormListener.bind(this);
-    this.deleteEducationListener = this.deleteEducationListener.bind(this);
-  }
-  educationalFormListener(e) {
-    this.props.updateEducationalInfo(
-      this.props.id,
+const EducationalForm = (props) => {
+  const educationalFormListener = (e) => {
+    props.updateEducationalInfo(
+      props.id,
       e.target.getAttribute("property"),
       e.target.value
     );
-  }
-  deleteEducationListener() {
-    this.props.deleteEducation(this.props.id);
-  }
-  render() {
-    const { institution, degree, from, to } = this.props.education;
-    return (
-      <div className={EducationalFormCSS.container}>
-        <form className={EducationalFormCSS.form}>
-          <input
-            type="text"
-            className={EducationalFormCSS.input}
-            placeholder="Name Of Institution"
-            property="institution"
-            value={institution}
-            onChange={this.educationalFormListener}
-          />
-          <input
-            type="text"
-            className={EducationalFormCSS.input}
-            placeholder="Name Of Degree"
-            property="degree"
-            value={degree}
-            onChange={this.educationalFormListener}
-          />
-          <input
-            type="text"
-            className={EducationalFormCSS.input}
-            placeholder="From"
-            property="from"
-            value={from}
-            onChange={this.educationalFormListener}
-          />
-          <input
-            type="text"
-            className={EducationalFormCSS.input}
-            placeholder="To"
-            property="to"
-            value={to}
-            onChange={this.educationalFormListener}
-          />
-        </form>
-        <button
-          className="delete-button"
-          onClick={this.deleteEducationListener}
-        >
-          DELETE
-        </button>
-      </div>
-    );
-  }
-}
+  };
+  const deleteEducationListener = () => {
+    props.deleteEducation(props.id);
+  };
+  const { institution, degree, from, to } = props.education;
+  return (
+    <div className={EducationalFormCSS.container}>
+      <form className={EducationalFormCSS.form}>
+        <input
+          type="text"
+          className={EducationalFormCSS.input}
+          placeholder="Name Of Institution"
+          property="institution"
+          value={institution}
+          onChange={educationalFormListener}
+        />
+        <input
+          type="text"
+          className={EducationalFormCSS.input}
+          placeholder="Name Of Degree"
+          property="degree"
+          value={degree}
+          onChange={educationalFormListener}
+        />
+        <input
+          type="text"
+          className={EducationalFormCSS.input}
+          placeholder="From"
+          property="from"
+          value={from}
+          onChange={educationalFormListener}
+        />
+        <input
+          type="text"
+          className={EducationalFormCSS.input}
+          placeholder="To"
+          property="to"
+          value={to}
+          onChange={educationalFormListener}
+        />
+      </form>
+      <button className="delete-button" onClick={deleteEducationListener}>
+        DELETE
+      </button>
+    </div>
+  );
+};
 
 export default EducationalForm;
