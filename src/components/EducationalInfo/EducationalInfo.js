@@ -4,7 +4,6 @@ import FormHeader from "../FormHeader/FormHeader";
 import EducationalForm from "../EducationalForm/EducationalForm";
 
 const EducationalInfo = (props) => {
-  console.log("educational");
   const loadEducationForms = () => {
     return props.educations.map((educationObject) => {
       return (
