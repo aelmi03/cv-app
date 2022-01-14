@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import GeneralPreview from "../GeneralPreview/GeneralPreview";
 import SkillsPreview from "../SkillsPreview/SkillsPreview";
 import DescriptionPreview from "../DescriptionPreview/DescriptionPreview";
